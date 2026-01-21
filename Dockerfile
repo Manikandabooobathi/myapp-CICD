@@ -6,12 +6,9 @@
 # Use official Tomcat image
 FROM tomcat:10.1.14-jdk17  # Change version if needed
 
-# Remove default ROOT webapp (optional)
-RUN rm -rf /usr/local/tomcat/webapps/ROOT
-
 # Copy your WAR file into Tomcat's webapps folder
 # Make sure your WAR file is named 'app.war'
-COPY target/app.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/myweb.war /usr/local/tomcat/webapps/
 
 # Expose Tomcat port
 EXPOSE 8080
