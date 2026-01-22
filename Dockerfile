@@ -4,7 +4,7 @@
 #COPY target/myweb.war /usr/local/tomcat/webapps/
 
 # Use official Tomcat image
-FROM tomcat:10.1.14-jdk17  # Change version if needed
+FROM tomcat:10.1.14-jdk17  
 
 # Copy your WAR file into Tomcat's webapps folder
 # Make sure your WAR file is named 'app.war'
